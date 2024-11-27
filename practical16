@@ -1,0 +1,47 @@
+Program: 16 Store manager needs to sort the prices of items in inventory to prepare a report. 
+The prices are initially listed in an unordered manner, and sorting them in 
+ascending order will facilitate easier analysis and decision-making regarding 
+pricing strategies and stock management. 
+Hint: Let the user decide the number of items 
+Code: #include<stdio.h> 
+void main() 
+{ 
+ int noofitems,x,y; 
+ 
+ printf("Enter a Number Of Items :"); 
+ scanf("%d",&noofitems); 
+ 
+ float prices[noofitems]; 
+ 
+ printf("\n"); 
+ printf("\nEnter Only price Of Product :\n"); 
+ // process of Take a Prices. 
+ for(x=0 ; x<noofitems ; x++) 
+ { 
+ printf("Enter a %d item :",x+1); 
+ scanf("%f",&prices[x]); 
+ 
+ } 
+ float temp=0; 
+ // Here this loop stands for sorting prices 
+ for(x=0 ; x<noofitems - 1; x++)
+  { 
+ for(y=0 ; y<noofitems - x - 1; y++) 
+ { 
+ if(prices[y] > prices[y + 1]) 
+ { 
+ temp = prices[y]; 
+ prices[y]=prices[y+1]; 
+ prices[y+1]=temp; 
+     } 
+   } 
+} 
+ // here this printf print sorted prices 
+ printf("Shortlist Of Item's Prices :"); 
+ printf("\n"); 
+ for(x=0 ; x<noofitems ; x++) 
+ { 
+ printf("%f\n",prices[x]); 
+ } 
+ printf("\n\n24ce032_TARANG");
+}
